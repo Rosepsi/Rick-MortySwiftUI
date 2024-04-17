@@ -15,7 +15,13 @@ class CharactersListViewModel: ObservableObject, CharactersListViewModelProtocol
     @Injected(\.getCharactersUseCase)
     private var getCharactesrUseCase: GetCharactersUseCaseProtocol
     
+    @Published var characters: [Character] = []
+    
     func fecth() {
-        getCharactersUseCase.execute()
+        Task {
+            do {
+                characters = try await getCharactesrUseCase.execute()
+            }
+        }
     }
 }

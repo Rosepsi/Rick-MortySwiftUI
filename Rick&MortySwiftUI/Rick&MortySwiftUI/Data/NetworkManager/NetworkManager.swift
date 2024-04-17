@@ -7,10 +7,6 @@
 
 import Foundation
 
-protocol NetworkManagerProtocol {
-    func fetch<Response: Decodable>(for request: URLRequest, with type: Response.Type) async throws -> Response
-}
-
 struct NetworkManager: NetworkManagerProtocol {
     @Injected(\.urlSession)
     private var urlSession: URLSession
@@ -33,9 +29,4 @@ struct NetworkManager: NetworkManagerProtocol {
             throw error
         }
     }
-}
-
-enum NetworkManagerError: Error {
-    case invalidResponse
-    case invalidCode(_ statusCode: Int)
 }

@@ -8,7 +8,7 @@
 import Foundation
 
 protocol GetCharactersUseCaseProtocol {
-    func execute()
+    func execute() async throws -> [Character]
 }
 
 // MARK: Dependency Injection

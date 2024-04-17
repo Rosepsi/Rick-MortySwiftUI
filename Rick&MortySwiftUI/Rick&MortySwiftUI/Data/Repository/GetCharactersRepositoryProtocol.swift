@@ -8,7 +8,7 @@
 import Foundation
 
 protocol GetCharactersRepositoryProtocol {
-    func get()
+    func get() async throws -> CharacterDTO 
 }
 
 // MARK: Dependency Injection

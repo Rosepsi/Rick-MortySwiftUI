@@ -9,10 +9,17 @@ import Foundation
 
 class GetCharactersRepository: GetCharactersRepositoryProtocol {
     
-    @Injected(\.charactersServices)
-    private var charactersServices: CharactersServicesProtocol
+    @Injected(\.charactersService)
+    private var charactersService: CharactersServiceProtocol
     
-    func get() {
-        charactersServices.execute()
+    private var characters: CharacterDTO?
+    
+    func get() async throws -> CharacterDTO {
+        if let characters {
+            return characters
+        }
+        let result = try await charactersService.execute()
+        characters = result
+        return result
     }
 }

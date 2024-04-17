@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-struct CharactersListView {
+struct CharactersListView: View {
     
     @ObservedObject var viewModel: CharactersListViewModel
     
@@ -17,12 +17,15 @@ struct CharactersListView {
     }
     
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        ScrollView {
+            VStack(spacing: 10) {
+                ForEach(viewModel.characters, id: \.id) { character in
+                    Text(character.name)
+                }
+            }
         }
-        .padding()
+        .onAppear() {
+            viewModel.fecth()
+        }
     }
 }

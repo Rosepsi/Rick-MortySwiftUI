@@ -8,10 +8,10 @@
 import SwiftUI
 
 @main
-struct Rick_MortySwiftUIApp: App {
+struct AppDelegate: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            CharactersListView(viewModel: CharactersListViewModel())
         }
     }
 }
