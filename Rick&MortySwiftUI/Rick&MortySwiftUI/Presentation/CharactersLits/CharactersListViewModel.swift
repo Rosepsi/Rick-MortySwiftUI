@@ -12,15 +12,15 @@ protocol CharactersListViewModelProtocol {
 }
 
 class CharactersListViewModel: ObservableObject, CharactersListViewModelProtocol {
-    @Injected(\.getCharactersUseCase)
-    private var getCharactesrUseCase: GetCharactersUseCaseProtocol
+    @Injected(\.getCharactersListUseCase)
+    private var getCharactesListUseCase: GetCharactersListUseCaseProtocol
     
     @Published var characters: [Character] = []
     
     func fecth() {
         Task {
             do {
-                characters = try await getCharactesrUseCase.execute()
+                characters = try await getCharactesListUseCase.execute()
             }
         }
     }

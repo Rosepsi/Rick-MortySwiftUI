@@ -1,5 +1,5 @@
 //
-//  CharactersService.swift
+//  CharacterDetailsService.swift
 //  Rick&MortySwiftUI
 //
 //  Created by Rosa Herrero on 17/4/24.
@@ -7,25 +7,24 @@
 
 import Foundation
 
-final class CharactersService: CharactersServiceProtocol {
+final class CharacterDetailsService: CharacterDetailsServiceProtocol {
     
     @Injected(\.networkManager)
     private var networkManager: NetworkManagerProtocol
     
-    func execute() async throws -> CharacterDTO {
+    func execute() async throws -> CharacterDetailsNetworkModel {
         guard let url = URLComponents.characters().url else {
             preconditionFailure("Unable to get URL from URLComponents")
         }
         var request = URLRequest(url: url)
         request.httpMethod = "GET"
-        return try await networkManager.fetch(for: request, with: CharacterDTO.self)
+        return try await networkManager.fetch(for: request, with: CharacterDetailsNetworkModel.self)
     }
     
 }
 
 private extension URLComponents {
     static func characters() -> Self {
-        Self(path: "/api/character")
+        Self(path: "/api/character/id")
     }
 }
-
