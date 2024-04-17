@@ -8,7 +8,7 @@
 import Foundation
 
 protocol GetCharacterDetailsRepositoryProtocol {
-    func get() async throws -> CharacterDetailsNetworkModel
+    func get(id: Int) async throws -> CharacterDetailsNetworkModel 
 }
 
 // MARK: Dependency Injection

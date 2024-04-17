@@ -42,6 +42,7 @@
 		32558AC52BD076E20058BC75 /* GetCharacterDetailsUseCaseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32558AC42BD076E20058BC75 /* GetCharacterDetailsUseCaseProtocol.swift */; };
 		32558AC92BD079850058BC75 /* CharacterDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32558AC82BD079850058BC75 /* CharacterDetailsView.swift */; };
 		32558ACB2BD0798D0058BC75 /* CharacterDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32558ACA2BD0798D0058BC75 /* CharacterDetailsViewModel.swift */; };
+		32558ACD2BD07D5C0058BC75 /* GetCharactersListRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32558ACC2BD07D5C0058BC75 /* GetCharactersListRepositoryTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,6 +93,7 @@
 		32558AC42BD076E20058BC75 /* GetCharacterDetailsUseCaseProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCharacterDetailsUseCaseProtocol.swift; sourceTree = "<group>"; };
 		32558AC82BD079850058BC75 /* CharacterDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailsView.swift; sourceTree = "<group>"; };
 		32558ACA2BD0798D0058BC75 /* CharacterDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailsViewModel.swift; sourceTree = "<group>"; };
+		32558ACC2BD07D5C0058BC75 /* GetCharactersListRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCharactersListRepositoryTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +158,7 @@
 			isa = PBXGroup;
 			children = (
 				32558A5E2BD050AE0058BC75 /* Rick_MortySwiftUITests.swift */,
+				32558ACC2BD07D5C0058BC75 /* GetCharactersListRepositoryTests.swift */,
 			);
 			path = "Rick&MortySwiftUITests";
 			sourceTree = "<group>";
@@ -494,6 +497,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				32558ACD2BD07D5C0058BC75 /* GetCharactersListRepositoryTests.swift in Sources */,
 				32558A5F2BD050AE0058BC75 /* Rick_MortySwiftUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

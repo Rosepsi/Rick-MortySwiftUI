@@ -12,14 +12,14 @@ class GetCharacterDetailsRepository: GetCharacterDetailsRepositoryProtocol {
     @Injected(\.characterDetailsService)
     private var characterDetailsService: CharacterDetailsServiceProtocol
     
-    private var characterDetails: CharacterDetailsNetworkModel?
+    private var characterDetails: [Int: CharacterDetailsNetworkModel] = [:]
     
-    func get() async throws -> CharacterDetailsNetworkModel {
-        if let characterDetails {
-            return characterDetails
+    func get(id: Int) async throws -> CharacterDetailsNetworkModel {
+        if let details = characterDetails[id] {
+            return details
         }
-        let details = try await characterDetailsService.execute()
-        characterDetails = details
+        let details = try await characterDetailsService.execute(id: id)
+        characterDetails[id] = details
         return details
     }
 }

@@ -12,8 +12,8 @@ final class CharacterDetailsService: CharacterDetailsServiceProtocol {
     @Injected(\.networkManager)
     private var networkManager: NetworkManagerProtocol
     
-    func execute() async throws -> CharacterDetailsNetworkModel {
-        guard let url = URLComponents.characters().url else {
+    func execute(id: Int) async throws -> CharacterDetailsNetworkModel {
+        guard let url = URLComponents.characters(id: id).url else {
             preconditionFailure("Unable to get URL from URLComponents")
         }
         var request = URLRequest(url: url)
@@ -24,7 +24,7 @@ final class CharacterDetailsService: CharacterDetailsServiceProtocol {
 }
 
 private extension URLComponents {
-    static func characters() -> Self {
-        Self(path: "/api/character/id")
+    static func characters(id: Int) -> Self {
+        Self(path: "/api/character/\(id)")
     }
 }

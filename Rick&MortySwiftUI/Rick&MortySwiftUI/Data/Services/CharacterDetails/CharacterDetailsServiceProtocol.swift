@@ -8,7 +8,7 @@
 import Foundation
 
 protocol CharacterDetailsServiceProtocol {
-    func execute() async throws -> CharacterDetailsNetworkModel
+    func execute(id: Int) async throws -> CharacterDetailsNetworkModel
 }
 
 // MARK: Dependency Injection

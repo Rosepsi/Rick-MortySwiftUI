@@ -12,8 +12,8 @@ final class GetCharacterDetailsUseCase: GetCharacterDetailsUseCaseProtocol {
     @Injected(\.getCharacterDetailsRepository)
     private var getCharacterDetailsRepository: GetCharacterDetailsRepositoryProtocol
     
-    func execute() async throws -> CharacterDetails {
-        let response = try await getCharacterDetailsRepository.get()
+    func execute(id:Int) async throws -> CharacterDetails {
+        let response = try await getCharacterDetailsRepository.get(id: id)
         return CharacterDetails(networkModel: response)
     }
 }

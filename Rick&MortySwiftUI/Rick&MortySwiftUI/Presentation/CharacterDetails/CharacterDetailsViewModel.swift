@@ -17,10 +17,16 @@ class CharacterDetailsViewModel: ObservableObject, CharacterDetailsViewModelProt
     
     @Published var characterDetails: CharacterDetails?
     
+    let id: Int
+    
+    init(id: Int) {
+        self.id = id
+    }
+    
     func fecth() {
         Task {
             do {
-                characterDetails = try await getCharacterDetailsUseCase.execute()
+                characterDetails = try await getCharacterDetailsUseCase.execute(id: id)
             }
         }
     }
