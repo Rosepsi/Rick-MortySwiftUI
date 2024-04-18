@@ -1,0 +1,10 @@
+platform :ios, '16.0'
+
+target 'Rick&MortySwiftUI' do
+  use_frameworks!
+pod 'Kingfisher', '~> 7.0'
+  target 'Rick&MortySwiftUITests' do
+    inherit! :search_paths
+  end
+
+end
