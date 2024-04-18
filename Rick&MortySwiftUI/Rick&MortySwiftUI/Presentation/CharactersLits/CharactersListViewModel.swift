@@ -12,7 +12,7 @@ class CharactersListViewModel: ObservableObject {
     @Injected(\.getCharactersListUseCase)
     private var getCharactersListUseCase: GetCharactersListUseCaseProtocol
     
-    @Published var characters: [Character] = [Character(name: "rick", image:  "https://rickandmortyapi.com/api/character/avatar/1.jpeg", url:  "https://rickandmortyapi.com/api/character/1", id: 1), Character(name: "luis", image:  "https://rickandmortyapi.com/api/character/avatar/1.jpeg", url:  "https://rickandmortyapi.com/api/character/1", id: 2), Character(name: "juan", image:  "https://rickandmortyapi.com/api/character/avatar/1.jpeg", url:  "https://rickandmortyapi.com/api/character/1", id: 3), Character(name: "pedro", image:  "https://rickandmortyapi.com/api/character/avatar/1.jpeg", url:  "https://rickandmortyapi.com/api/character/1", id: 4)]
+    @Published var characters: [Character] = []
     
     func fecth() {
         Task {

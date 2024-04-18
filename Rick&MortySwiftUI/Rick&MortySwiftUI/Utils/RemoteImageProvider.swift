@@ -17,7 +17,9 @@ struct RemoteImageProvider: View {
     var body: some View {
         KFImage(URL(string: image)!)
             .resizable()
+            .loadDiskFileSynchronously()
+            .cacheMemoryOnly()
+            .fade(duration: 0.25)
+            .aspectRatio(contentMode: .fill)
     }
 }
-
-

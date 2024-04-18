@@ -8,7 +8,7 @@
 import Foundation
 
 protocol GetCharacterDetailsUseCaseProtocol {
-    func execute(id:Int) async throws -> CharacterDetails 
+    func execute(id:Int) async throws -> Character
 }
 
 // MARK: Dependency Injection

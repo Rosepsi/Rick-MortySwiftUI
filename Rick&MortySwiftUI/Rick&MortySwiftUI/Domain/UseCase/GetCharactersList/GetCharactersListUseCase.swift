@@ -14,6 +14,6 @@ final class GetCharactersListUseCase: GetCharactersListUseCaseProtocol {
     
     func execute() async throws -> [Character] {
         let response = try await getCharactersListRepository.get()
-        return response.results.map({ Character(name: $0.name, image: $0.image, url: $0.url, id: $0.id) })
+        return response.results.map({ Character(networkModel: $0) })
     }
 }

@@ -80,13 +80,6 @@ struct Card: View {
     }
 }
 
-struct Card_Previews: PreviewProvider {
-    static var previews: some View {
-        Card(character: Character(name: "rick", image:  "https://rickandmortyapi.com/api/character/avatar/1.jpeg", url:  "https://rickandmortyapi.com/api/character/1", id: 1))
-            .frame(height: 60)
-    }
-}
-
 
 extension Color {
     static let blueColor = Color("BlueColor")
