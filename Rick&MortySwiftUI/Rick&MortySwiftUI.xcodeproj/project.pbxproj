@@ -17,6 +17,9 @@
 		3223BE462BD1CA7500D69749 /* jerry.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 3223BE412BD1CA7500D69749 /* jerry.usdz */; };
 		3223BE472BD1CA7500D69749 /* morty.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 3223BE422BD1CA7500D69749 /* morty.usdz */; };
 		3223BE492BD1CA9000D69749 /* Model3D.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3223BE482BD1CA9000D69749 /* Model3D.swift */; };
+		3223BE4B2BD1CFA400D69749 /* ExtensionColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3223BE4A2BD1CFA400D69749 /* ExtensionColor.swift */; };
+		3223BE4F2BD1CFD100D69749 /* CardCharacterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3223BE4E2BD1CFD100D69749 /* CardCharacterView.swift */; };
+		3223BE512BD1D01400D69749 /* SceneView3DModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3223BE502BD1D01400D69749 /* SceneView3DModel.swift */; };
 		32558A4E2BD050AB0058BC75 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32558A4D2BD050AB0058BC75 /* AppDelegate.swift */; };
 		32558A522BD050AE0058BC75 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 32558A512BD050AE0058BC75 /* Assets.xcassets */; };
 		32558A552BD050AE0058BC75 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 32558A542BD050AE0058BC75 /* Preview Assets.xcassets */; };
@@ -75,6 +78,9 @@
 		3223BE412BD1CA7500D69749 /* jerry.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = jerry.usdz; sourceTree = "<group>"; };
 		3223BE422BD1CA7500D69749 /* morty.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = morty.usdz; sourceTree = "<group>"; };
 		3223BE482BD1CA9000D69749 /* Model3D.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model3D.swift; sourceTree = "<group>"; };
+		3223BE4A2BD1CFA400D69749 /* ExtensionColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionColor.swift; sourceTree = "<group>"; };
+		3223BE4E2BD1CFD100D69749 /* CardCharacterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCharacterView.swift; sourceTree = "<group>"; };
+		3223BE502BD1D01400D69749 /* SceneView3DModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneView3DModel.swift; sourceTree = "<group>"; };
 		32558A4A2BD050AB0058BC75 /* Rick&MortySwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Rick&MortySwiftUI.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		32558A4D2BD050AB0058BC75 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		32558A512BD050AE0058BC75 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -231,6 +237,7 @@
 				32558AA22BD062EA0058BC75 /* URLComponents.swift */,
 				32558AA42BD063A00058BC75 /* Constants.swift */,
 				3223BE332BD1C21B00D69749 /* RemoteImageProvider.swift */,
+				3223BE4A2BD1CFA400D69749 /* ExtensionColor.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -387,6 +394,7 @@
 			children = (
 				32558A7E2BD055660058BC75 /* CharactersListViewModel.swift */,
 				32558A802BD055770058BC75 /* CharactersListView.swift */,
+				3223BE4E2BD1CFD100D69749 /* CardCharacterView.swift */,
 			);
 			path = CharactersLits;
 			sourceTree = "<group>";
@@ -396,6 +404,7 @@
 			children = (
 				32558AC82BD079850058BC75 /* CharacterDetailsView.swift */,
 				32558ACA2BD0798D0058BC75 /* CharacterDetailsViewModel.swift */,
+				3223BE502BD1D01400D69749 /* SceneView3DModel.swift */,
 			);
 			path = CharacterDetails;
 			sourceTree = "<group>";
@@ -591,7 +600,9 @@
 				32558A8E2BD057E00058BC75 /* GetCharactersListUseCaseProtocol.swift in Sources */,
 				32558A9A2BD05CCB0058BC75 /* URLSession.swift in Sources */,
 				32558A942BD05A3E0058BC75 /* GetCharactersListRepositoryProtocol.swift in Sources */,
+				3223BE4F2BD1CFD100D69749 /* CardCharacterView.swift in Sources */,
 				32558ABD2BD075960058BC75 /* CharacterDetailsGender.swift in Sources */,
+				3223BE4B2BD1CFA400D69749 /* ExtensionColor.swift in Sources */,
 				32558AB72BD074B30058BC75 /* GetCharacterDetailsRepositoryProtocol.swift in Sources */,
 				32558A902BD059E60058BC75 /* PropertyWrapper.swift in Sources */,
 				32558AC52BD076E20058BC75 /* GetCharacterDetailsUseCaseProtocol.swift in Sources */,
@@ -608,6 +619,7 @@
 				32558A812BD055770058BC75 /* CharactersListView.swift in Sources */,
 				32558AB52BD074AD0058BC75 /* GetCharacterDetailsRepository.swift in Sources */,
 				32558A962BD05AC20058BC75 /* CharactersListService.swift in Sources */,
+				3223BE512BD1D01400D69749 /* SceneView3DModel.swift in Sources */,
 				3223BE492BD1CA9000D69749 /* Model3D.swift in Sources */,
 				32558AC32BD076CC0058BC75 /* GetCharacterDetailsUseCase.swift in Sources */,
 				32558ACB2BD0798D0058BC75 /* CharacterDetailsViewModel.swift in Sources */,
