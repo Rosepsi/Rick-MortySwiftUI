@@ -24,6 +24,7 @@ final class GetCharactersListRepositoryTests: XCTestCase {
         let getList = try await list.get()
         let getNewList = try await list.get()
         XCTAssertEqual(mock.numberOfCalls, 1)
+        XCTAssertEqual(getList.info.next, getNewList.info.next)
     }
 }
 

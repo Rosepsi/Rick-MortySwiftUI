@@ -26,7 +26,12 @@ class CharacterDetailsViewModel: ObservableObject, CharacterDetailsViewModelProt
     func fecth() {
         Task {
             do {
-                characterDetails = try await getCharacterDetailsUseCase.execute(id: id)
+                let fetchCharacterDetails = try await getCharacterDetailsUseCase.execute(id: id)
+                DispatchQueue.main.async {
+                    self.characterDetails = fetchCharacterDetails
+                }
+            } catch {
+                // show errors to the users
             }
         }
     }

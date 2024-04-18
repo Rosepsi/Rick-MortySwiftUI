@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		32170D8F2BD1AA4900CF60B5 /* GetCharacterDetailsUseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32170D8E2BD1AA4900CF60B5 /* GetCharacterDetailsUseTests.swift */; };
 		32558A4E2BD050AB0058BC75 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32558A4D2BD050AB0058BC75 /* AppDelegate.swift */; };
 		32558A522BD050AE0058BC75 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 32558A512BD050AE0058BC75 /* Assets.xcassets */; };
 		32558A552BD050AE0058BC75 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 32558A542BD050AE0058BC75 /* Preview Assets.xcassets */; };
-		32558A5F2BD050AE0058BC75 /* Rick_MortySwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32558A5E2BD050AE0058BC75 /* Rick_MortySwiftUITests.swift */; };
 		32558A792BD051300058BC75 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32558A782BD051300058BC75 /* NetworkManager.swift */; };
 		32558A7C2BD054890058BC75 /* InyectionValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32558A7B2BD054890058BC75 /* InyectionValues.swift */; };
 		32558A7F2BD055660058BC75 /* CharactersListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32558A7E2BD055660058BC75 /* CharactersListViewModel.swift */; };
@@ -56,12 +56,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		32170D8E2BD1AA4900CF60B5 /* GetCharacterDetailsUseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCharacterDetailsUseTests.swift; sourceTree = "<group>"; };
 		32558A4A2BD050AB0058BC75 /* Rick&MortySwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Rick&MortySwiftUI.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		32558A4D2BD050AB0058BC75 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		32558A512BD050AE0058BC75 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		32558A542BD050AE0058BC75 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		32558A5A2BD050AE0058BC75 /* Rick&MortySwiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Rick&MortySwiftUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		32558A5E2BD050AE0058BC75 /* Rick_MortySwiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rick_MortySwiftUITests.swift; sourceTree = "<group>"; };
 		32558A782BD051300058BC75 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		32558A7B2BD054890058BC75 /* InyectionValues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InyectionValues.swift; sourceTree = "<group>"; };
 		32558A7E2BD055660058BC75 /* CharactersListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersListViewModel.swift; sourceTree = "<group>"; };
@@ -157,8 +157,8 @@
 		32558A5D2BD050AE0058BC75 /* Rick&MortySwiftUITests */ = {
 			isa = PBXGroup;
 			children = (
-				32558A5E2BD050AE0058BC75 /* Rick_MortySwiftUITests.swift */,
 				32558ACC2BD07D5C0058BC75 /* GetCharactersListRepositoryTests.swift */,
+				32170D8E2BD1AA4900CF60B5 /* GetCharacterDetailsUseTests.swift */,
 			);
 			path = "Rick&MortySwiftUITests";
 			sourceTree = "<group>";
@@ -497,8 +497,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				32170D8F2BD1AA4900CF60B5 /* GetCharacterDetailsUseTests.swift in Sources */,
 				32558ACD2BD07D5C0058BC75 /* GetCharactersListRepositoryTests.swift in Sources */,
-				32558A5F2BD050AE0058BC75 /* Rick_MortySwiftUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

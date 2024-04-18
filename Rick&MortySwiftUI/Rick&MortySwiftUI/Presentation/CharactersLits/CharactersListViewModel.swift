@@ -7,20 +7,22 @@
 
 import Foundation
 
-protocol CharactersListViewModelProtocol {
-    func fecth()
-}
-
-class CharactersListViewModel: ObservableObject, CharactersListViewModelProtocol {
-    @Injected(\.getCharactersListUseCase)
-    private var getCharactesListUseCase: GetCharactersListUseCaseProtocol
+class CharactersListViewModel: ObservableObject {
     
-    @Published var characters: [Character] = []
+    @Injected(\.getCharactersListUseCase)
+    private var getCharactersListUseCase: GetCharactersListUseCaseProtocol
+    
+    @Published var characters: [Character] = [Character(name: "rick", image:  "https://rickandmortyapi.com/api/character/avatar/1.jpeg", url:  "https://rickandmortyapi.com/api/character/1", id: 1), Character(name: "luis", image:  "https://rickandmortyapi.com/api/character/avatar/1.jpeg", url:  "https://rickandmortyapi.com/api/character/1", id: 2), Character(name: "juan", image:  "https://rickandmortyapi.com/api/character/avatar/1.jpeg", url:  "https://rickandmortyapi.com/api/character/1", id: 3), Character(name: "pedro", image:  "https://rickandmortyapi.com/api/character/avatar/1.jpeg", url:  "https://rickandmortyapi.com/api/character/1", id: 4)]
     
     func fecth() {
         Task {
             do {
-                characters = try await getCharactesListUseCase.execute()
+                let fetchedCharacters = try await getCharactersListUseCase.execute()
+                DispatchQueue.main.async {
+                    self.characters = fetchedCharacters
+                }
+            } catch {
+                // show errors to the users
             }
         }
     }
