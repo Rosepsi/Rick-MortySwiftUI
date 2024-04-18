@@ -56,11 +56,15 @@ struct Card: View {
         ZStack {
             Color.blueColor
             HStack {
-                Image(character.image)
-                    .resizable()
+                RemoteImageProvider(image: character.image)
+                    .clipped()
+                    .cornerRadius(4)
+                    .padding(.horizontal, 0)
                     .frame(width: 60, height: 60)
                 Text(character.name)
                     .foregroundColor(Color.yellowColor)
+                    .padding(.horizontal, 10)
+                Spacer()
                 Image(systemName: "chevron.right")
                     .resizable()
                     .fixedSize()
@@ -68,7 +72,6 @@ struct Card: View {
             }
             .padding(.horizontal, 15)
         }
-        .padding(.all)
         .overlay(
             RoundedRectangle(cornerRadius: 20)
                 .stroke(Color.yellowColor, lineWidth: 1)
